@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Compra de Componentes de Computadora</title>
+    <style>
+        /* Fondo degradado para el body */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #f4f4f9;
+        }
+        h1 {
+            text-align: center;
+            color: #61dafb;
+            font-size: 1.8em;
+            margin-bottom: 0.5em;
+        }
+
+        /* Contenedor del formulario */
+        .form-container {
+            background-color: #222831;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Efecto de entrada */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Estilos de campos y etiquetas */
+        label {
+            display: block;
+            margin-top: 1em;
+            font-weight: bold;
+            color: #61dafb;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.8em;
+            margin-top: 0.5em;
+            border: 1px solid #61dafb;
+            border-radius: 6px;
+            background-color: #393e46;
+            color: #f4f4f9;
+            font-size: 1em;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+            background-color: #495057;
+            outline: none;
+            transform: scale(1.02);
+        }
+
+        /* Botón de envío */
+        .submit-btn {
+            width: 100%;
+            padding: 1em;
+            margin-top: 1.5em;
+            background: linear-gradient(90deg, #61dafb, #21a1f1);
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            font-weight: bold;
+            color: #222831;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .submit-btn:hover {
+            background: linear-gradient(90deg, #21a1f1, #61dafb);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Formulario de Compra de Componentes</h1>
+        <form action="#" method="post">
+            <!-- Datos Personales -->
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+
+            <label for="telefono">Teléfono</label>
+            <input type="text" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono" required>
+
+            <!-- Selección de componentes -->
+            <label for="monitor">Monitor</label>
+            <select id="monitor" name="monitor">
+                <option value="">Selecciona un monitor</option>
+                <option value="24 pulgadas">24 pulgadas - Full HD</option>
+                <option value="27 pulgadas">27 pulgadas - QHD</option>
+                <option value="32 pulgadas">32 pulgadas - 4K</option>
+            </select>
+
+            <label for="grafica">Tarjeta Gráfica</label>
+            <select id="grafica" name="grafica">
+                <option value="">Selecciona una tarjeta gráfica</option>
+                <option value="NVIDIA GTX 1660">NVIDIA GTX 1660</option>
+                <option value="NVIDIA RTX 3060">NVIDIA RTX 3060</option>
+                <option value="AMD RX 6700 XT">AMD RX 6700 XT</option>
+            </select>
+
+            <label for="procesador">Procesador</label>
+            <select id="procesador" name="procesador">
+                <option value="">Selecciona un procesador</option>
+                <option value="Intel Core i5">Intel Core i5</option>
+                <option value="Intel Core i7">Intel Core i7</option>
+                <option value="AMD Ryzen 5">AMD Ryzen 5</option>
+                <option value="AMD Ryzen 7">AMD Ryzen 7</option>
+            </select>
+
+            <label for="ram">Memoria RAM</label>
+            <select id="ram" name="ram">
+                <option value="">Selecciona una memoria RAM</option>
+                <option value="8 GB">8 GB</option>
+                <option value="16 GB">16 GB</option>
+                <option value="32 GB">32 GB</option>
+            </select>
+
+            <label for="almacenamiento">Almacenamiento</label>
+            <select id="almacenamiento" name="almacenamiento">
+                <option value="">Selecciona un almacenamiento</option>
+                <option value="SSD 256 GB">SSD 256 GB</option>
+                <option value="SSD 512 GB">SSD 512 GB</option>
+                <option value="HDD 1 TB">HDD 1 TB</option>
+                <option value="HDD 2 TB">HDD 2 TB</option>
+            </select>
+
+            <label for="fuente">Fuente de Poder</label>
+            <select id="fuente" name="fuente">
+                <option value="">Selecciona una fuente de poder</option>
+                <option value="500W">500W</option>
+                <option value="650W">650W</option>
+                <option value="750W">750W</option>
+            </select>
+
+            <!-- Detalles adicionales -->
+            <label for="detalles">Detalles Adicionales</label>
+            <textarea id="detalles" name="detalles" rows="4" placeholder="Especifica otros detalles, preferencias o requerimientos..."></textarea>
+
+            <!-- Botón de Envío -->
+            <button type="submit" class="submit-btn">Enviar Pedido</button>
+        </form>
+    </div>
+
+</body>
+</html>
+
